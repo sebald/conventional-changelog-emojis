@@ -16,7 +16,7 @@ The convention is based on [Angular's Commit Message Guidelines](https://github.
 <footer>
 ```
 
-You can find the supported emojis and their meaning [here](https://github.com/sebald/commit-emojis/blob/master/README.md#available-emojis.
+You can find the supported emojis and their meaning [here](https://github.com/sebald/commit-emojis/blob/master/README.md#available-emojis).
 
 ### Examples
 
