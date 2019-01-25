@@ -37,7 +37,7 @@ test('should work if there is no semver tag', function(done) {
 
         expect(chunk).toMatch('### Features');
         expect(chunk).toMatch('### Refactoring & Improvements');
-        expect(chunk).toMatch('### Build System');
+        expect(chunk).toMatch('### Tooling');
 
         // Capitalize
         expect(chunk).toMatch('Cool new feature');

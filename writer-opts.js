@@ -19,7 +19,7 @@ const mapToHeadline = {
   [emoji.test]: 'Tests',
   [emoji.removal]: 'Deprecations',
   [emoji.style]: 'UI Updates',
-  [emoji.tooling]: 'Build System',
+  [emoji.tooling]: 'Tooling',
   [emoji.docs]: 'Documentation',
 };
 
