@@ -7,6 +7,8 @@ const emoji = require('commit-emojis').default;
 const readFile = Q.denodeify(require('fs').readFile);
 const resolve = require('path').resolve;
 
+const capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
+
 // Commit Types
 // ---------------
 const MISC_TYPE = 'Miscellaneous';
@@ -58,6 +60,7 @@ function getWriterOpts() {
       });
 
       commit.type = mapToHeadline[commit.type] || MISC_TYPE;
+      commit.subject = capitalize(commit.subject);
 
       if (typeof commit.hash === `string`) {
         commit.hash = commit.hash.substring(0, 7);

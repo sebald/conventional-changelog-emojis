@@ -39,6 +39,9 @@ test('should work if there is no semver tag', function(done) {
         expect(chunk).toMatch('### Refactoring & Improvements');
         expect(chunk).toMatch('### Build System');
 
+        // Capitalize
+        expect(chunk).toMatch('Cool new feature');
+
         expect(chunk).toMatch('### Miscellaneous');
         expect(chunk).toMatch('Ooops wrong emoji!');
         expect(chunk).toMatch('Ooops no emoji!');
