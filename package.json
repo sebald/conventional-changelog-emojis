@@ -1,6 +1,6 @@
 {
   "name": "conventional-changelog-emojis",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "conventional-changelog preset with emojis",
   "license": "MIT",
   "repository": "sebald/conventional-changelog-emojis",
