@@ -1,1 +1,11 @@
+.DS_Store
+.gitignore
+.*rc
+.prettierignore
+*.lock
+*.log
 **/*.hbs
+CHANGELOG.md
+LICENCE
+node_modules
+tmp
