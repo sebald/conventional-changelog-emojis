@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/sebald/conventional-changelog-emojis/compare/v2.0.0...v3.0.0) (2019-02-07)
+
+
+### Features
+
+- Add Jira support ([d9f259e](https://github.com/sebald/conventional-changelog-emojis/commit/d9f259e))
+
+
+### Tooling
+
+- No CI email on success ([b9397de](https://github.com/sebald/conventional-changelog-emojis/commit/b9397de))
+- Update prettier + jest ([79f3291](https://github.com/sebald/conventional-changelog-emojis/commit/79f3291))
+
+
 # [2.0.0](https://github.com/sebald/conventional-changelog-emojis/compare/v1.3.0...v2.0.0) (2019-01-28)
 
 
