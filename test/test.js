@@ -22,6 +22,9 @@ beforeAll(function() {
   gitDummyCommit(['🌈  make it better', 'BREAKING CHANGE: New API!']);
   gitDummyCommit(['Ooops no emoji!']);
   gitDummyCommit(['🤪  Ooops wrong emoji!']);
+
+  gitDummyCommit(['🐛 Fixed it', 'Closes #123']);
+  gitDummyCommit(['✨ Added cool Feature', 'Closes ABC-456']);
 });
 
 test('should work if there is no semver tag', function(done) {
@@ -50,6 +53,44 @@ test('should work if there is no semver tag', function(done) {
 
         expect(chunk).not.toMatch('v99.99.99');
         expect(chunk).not.toMatch('### Version');
+
+        done();
+      })
+    );
+});
+
+test('should support "#" and "ABC-" issues prefixes', done => {
+  conventionalChangelogCore({
+    config: config,
+  })
+    .on('error', function(err) {
+      done(err);
+    })
+    .pipe(
+      through(function(chunk) {
+        chunk = chunk.toString();
+
+        expect(chunk).toMatch('closes [#123](');
+        expect(chunk).toMatch('closes [ABC-456](');
+
+        done();
+      })
+    );
+});
+
+test('should use "bugs.url" if available', done => {
+  conventionalChangelogCore({
+    config: config,
+  })
+    .on('error', function(err) {
+      done(err);
+    })
+    .pipe(
+      through(function(chunk) {
+        chunk = chunk.toString();
+
+        expect(chunk).toMatch('http://jira.example.com/browse/123');
+        expect(chunk).toMatch('http://jira.example.com/browse/ABC-456');
 
         done();
       })

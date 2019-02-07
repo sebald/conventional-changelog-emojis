@@ -80,6 +80,24 @@ function getWriterOpts() {
         );
       }
 
+      // Use `package.json` -> `bugs.url` if available
+      const { bugs } = context.packageData;
+      const bugsUrl = bugs.url ? bugs.url.replace(/\/$/, '') : null;
+
+      // If available `<bugsUrl>/<pathname>` will be used in template.
+      commit.references = commit.references.map(ref => {
+        /**
+         * Git(Hub|Lab), Bitbucket, ... use #<number> to reference issues.
+         * But can not be part of URL.
+         */
+        const pathname = ref.raw.replace(/^#/, '');
+        return {
+          ...ref,
+          pathname,
+          bugsUrl,
+        };
+      });
+
       return commit;
     },
     groupBy: 'type',

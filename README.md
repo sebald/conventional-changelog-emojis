@@ -34,6 +34,24 @@ Appears under "Bug Fixes" header, graphite subheader, with a link to issue #28:
 Closes #28
 ```
 
+## Smart Commit Support
+
+This preset supporst mulitple smart commit formats.
+
+### GitHub, Gitlab, Bitbucket, ...
+
+If a smart commit references an issue with the `#` prefix (This is supported by `conventional-changelog` by default) they will be linked in the generated changelog.
+
+### Jira, ...
+
+If a smart commit references an issue with the `ABC-` prefix they will be linked in the generated changelog.
+
+### Different issue tracker URL
+
+If your issue tracker has a different URL than your repository (e.g. your using Bitbucket and track issues in Jira), you can specify this in your `package.json` via the `bugs.url` field.
+
+This preset supports [Jira Smart Commits](https://confluence.atlassian.com/bitbucket/use-smart-commits-298979931.html)
+
 ---
 
 _Based on the [`conventional-changelog-angular`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular) preset._

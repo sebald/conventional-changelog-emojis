@@ -4,6 +4,9 @@
   "description": "conventional-changelog preset with emojis",
   "license": "MIT",
   "repository": "sebald/conventional-changelog-emojis",
+  "bugs": {
+    "url": "http://jira.example.com/browse"
+  },
   "keywords": [
     "conventional-changelog",
     "emoji",

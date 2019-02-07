@@ -30,31 +30,36 @@
     {{~#if this.owner}}
       {{~this.owner}}/
     {{~/if}}
-    {{~this.repository}}#{{this.issue}}](
-    {{~#if @root.repository}}
-      {{~#if @root.host}}
-        {{~@root.host}}/
-      {{~/if}}
-      {{~#if this.repository}}
-        {{~#if this.owner}}
-          {{~this.owner}}/
-        {{~/if}}
-        {{~this.repository}}
-      {{~else}}
-        {{~#if @root.owner}}
-          {{~@root.owner}}/
-        {{~/if}}
-          {{~@root.repository}}
-        {{~/if}}
+    {{~this.repository}}{{this.prefix}}{{this.issue}}](
+    {{~#if this.bugsUrl}}
+      {{~this.bugsUrl}}/{{this.pathname}}
     {{~else}}
-      {{~@root.repoUrl}}
+      {{~#if @root.repository}}
+        {{~#if @root.host}}
+          {{~@root.host}}/
+        {{~/if}}
+        {{~#if this.repository}}
+          {{~#if this.owner}}
+            {{~this.owner}}/
+          {{~/if}}
+          {{~this.repository}}
+        {{~else}}
+          {{~#if @root.owner}}
+            {{~@root.owner}}/
+          {{~/if}}
+            {{~@root.repository}}
+          {{~/if}}
+      {{~else}}
+        {{~@root.repoUrl}}
+      {{~/if}}/
+      {{~@root.issue}}/{{this.pathname}})
     {{~/if}}/
-    {{~@root.issue}}/{{this.issue}})
+
   {{~else}}
     {{~#if this.owner}}
       {{~this.owner}}/
     {{~/if}}
-    {{~this.repository}}#{{this.issue}}
+    {{~this.repository}}{{this.prefix}}{{this.pathname}}
   {{~/if}}{{/each}}
 {{~/if}}
 
