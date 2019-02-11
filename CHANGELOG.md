@@ -1,3 +1,11 @@
+## [3.0.1](https://github.com/sebald/conventional-changelog-emojis/compare/v3.0.0...v3.0.1) (2019-02-11)
+
+
+### Bug Fixes
+
+- Safely access `bugs` field in `package.json` ([9f6f6ba](https://github.com/sebald/conventional-changelog-emojis/commit/9f6f6ba))
+
+
 # [3.0.0](https://github.com/sebald/conventional-changelog-emojis/compare/v2.0.0...v3.0.0) (2019-02-07)
 
 
