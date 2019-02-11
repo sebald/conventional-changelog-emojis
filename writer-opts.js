@@ -82,7 +82,7 @@ function getWriterOpts() {
 
       // Use `package.json` -> `bugs.url` if available
       const { bugs } = context.packageData;
-      const bugsUrl = bugs.url ? bugs.url.replace(/\/$/, '') : null;
+      const bugsUrl = bugs && bugs.url ? bugs.url.replace(/\/$/, '') : null;
 
       // If available `<bugsUrl>/<pathname>` will be used in template.
       commit.references = commit.references.map(ref => {
