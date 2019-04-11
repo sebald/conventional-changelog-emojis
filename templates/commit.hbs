@@ -5,7 +5,7 @@
 {{~/if}}
 
 {{~!-- commit link --}} {{#if @root.linkReferences~}}
-  ([{{hash}}](
+  ([{{~#if shorthash}}{{shorthash}}{{~else}}{{hash}}{{~/if}}](
   {{~#if @root.repository}}
     {{~#if @root.host}}
       {{~@root.host}}/

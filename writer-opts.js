@@ -63,7 +63,7 @@ function getWriterOpts() {
       commit.subject = capitalize(commit.subject);
 
       if (typeof commit.hash === `string`) {
-        commit.hash = commit.hash.substring(0, 7);
+        commit.shorthash = commit.hash.substring(0, 7);
       }
 
       if (context.host) {
