@@ -1,3 +1,12 @@
+# [3.1.0](https://github.com/sebald/conventional-changelog-emojis/compare/v3.0.1...v3.1.0) (2019-04-11)
+
+
+### Refactoring & Improvements
+
+- Remove [@root](https://github.com/root) debug statement ([4706a01](https://github.com/sebald/conventional-changelog-emojis/commit/4706a01))
+- Use full hash in commit link ([58b3f47](https://github.com/sebald/conventional-changelog-emojis/commit/58b3f47))
+
+
 ## [3.0.1](https://github.com/sebald/conventional-changelog-emojis/compare/v3.0.0...v3.0.1) (2019-02-11)
 
 
